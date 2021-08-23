@@ -1,0 +1,115 @@
+macro "macro"
+	elem 
+		name = "Center+REP"
+		command = ".center"
+	elem 
+		name = "West"
+		command = "OnMoveKey 8 1"
+	elem 
+		name = "West+UP"
+		command = "OnMoveKey 8 0"
+	elem 
+		name = "North"
+		command = "OnMoveKey 1 1"
+	elem 
+		name = "North+UP"
+		command = "OnMoveKey 1 0"
+	elem 
+		name = "East"
+		command = "OnMoveKey 4 1"
+	elem 
+		name = "East+UP"
+		command = "OnMoveKey 4 0"
+	elem 
+		name = "South"
+		command = "OnMoveKey 2 1"
+	elem 
+		name = "South+UP"
+		command = "OnMoveKey 2 0"
+	elem 
+		name = "A"
+		command = "OnMoveKey 8 1"
+	elem 
+		name = "A+UP"
+		command = "OnMoveKey 8 0"
+	elem 
+		name = "D"
+		command = "OnMoveKey 4 1"
+	elem 
+		name = "D+UP"
+		command = "OnMoveKey 4 0"
+	elem 
+		name = "S"
+		command = "OnMoveKey 2 1"
+	elem 
+		name = "S+UP"
+		command = "OnMoveKey 2 0"
+	elem 
+		name = "W"
+		command = "OnMoveKey 1 1"
+	elem 
+		name = "W+UP"
+		command = "OnMoveKey 1 0"
+
+
+menu "menu"
+
+
+window "debug"
+	elem "debug"
+		type = MAIN
+		pos = 281,0
+		size = 320x480
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "DEBUG"
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+		outer-size = 336x519
+		inner-size = 320x480
+	elem "output"
+		type = OUTPUT
+		pos = 0,200
+		size = 320x280
+		anchor1 = 0,42
+		anchor2 = 100,100
+		is-default = true
+		border = sunken
+		saved-params = "max-lines"
+	elem "info"
+		type = INFO
+		pos = 0,0
+		size = 320x200
+		anchor1 = 0,0
+		anchor2 = 100,42
+		is-default = true
+		saved-params = ""
+		tab-background-color = none
+
+window "default"
+	elem "default"
+		type = MAIN
+		pos = 281,0
+		size = 1024x768
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-resize = false
+		macro = "macro"
+		menu = "menu"
+	elem "map"
+		type = MAP
+		pos = 0,0
+		size = 1024x768
+		anchor1 = 0,0
+		anchor2 = 100,100
+		is-default = true
+		saved-params = "zoom;letterbox;zoom-mode"
+

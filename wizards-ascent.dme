@@ -1,0 +1,29 @@
+// DM Environment file for wizards-ascent.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+#define DEBUG
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "interface.dmf"
+#include "tilemap.dmm"
+#include "src\client.dm"
+#include "src\item.dm"
+#include "src\main.dm"
+#include "src\monster.dm"
+#include "src\path.dm"
+#include "src\player.dm"
+#include "src\trap.dm"
+#include "src\turf.dm"
+#include "src\zone.dm"
+// END_INCLUDE
+
