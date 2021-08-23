@@ -18,6 +18,9 @@ mob/player
 	proc/Death(atom/ref)
 	proc/Step(d)
 
+mob/player/Stat()
+	stat("health / max_health", "[src.health] / [src.max_health]")
+
 mob/player/Login()
 	..()
 	world << "Hello, world!"
@@ -35,6 +38,12 @@ mob/player/Move(newloc, d)
 		return FALSE
 
 	return ..()
+
+mob/player/Crossed(atom/movable/ref)
+	if (ismonster(ref))
+		var/mob/monster/m = ref
+
+		src.TakeDamage(1, m)
 
 mob/player/Heal(n)
 	src.health = clamp(src.health + n, 0, src.max_health)

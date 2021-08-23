@@ -16,14 +16,17 @@
 // BEGIN_INCLUDE
 #include "interface.dmf"
 #include "tilemap.dmm"
+#include "src\blade.dm"
 #include "src\client.dm"
 #include "src\item.dm"
 #include "src\main.dm"
 #include "src\monster.dm"
 #include "src\path.dm"
 #include "src\player.dm"
+#include "src\skeleton.dm"
+#include "src\spear.dm"
+#include "src\spike.dm"
 #include "src\trap.dm"
 #include "src\turf.dm"
 #include "src\zone.dm"
 // END_INCLUDE
-
