@@ -36,8 +36,8 @@ mob/player/Login()
 	src.max_health = 3
 	src.health = src.max_health
 	src.visited_waypoints = list()
-	src.last_waypoint = game?.GetWaypointByName("start")
-	src.Move(src.last_waypoint, src.dir)
+	src.last_waypoint = "start"
+	src.Move(game?.GetWaypointByName(src.last_waypoint), src.dir)
 
 mob/player/Move(newloc, d)
 	if (!src.can_move)
@@ -65,6 +65,8 @@ mob/player/TakeDamage(n, atom/ref)
 
 mob/player/Death(atom/ref)
 	world << "player was killed by [ref.name]"
+	src.Move(game?.GetWaypointByName(src.last_waypoint), src.dir)
+	src.Heal(src.max_health)
 
 mob/player/Step(d)
 	if (src.next_step - world.time >= world.tick_lag / 10)

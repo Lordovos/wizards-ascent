@@ -8,13 +8,7 @@ world
 
 world/New()
 	game = new ()
-/*
-	for (var/mob/monster/m in world)
-		m.Cycle()
 
-	for (var/turf/trap/spike/s in world)
-		s.Cycle()
-*/
 var/game/game
 
 atom/movable/Bump(atom/obstacle)
