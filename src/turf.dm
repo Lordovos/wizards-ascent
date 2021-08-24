@@ -10,6 +10,3 @@ turf/floor
 turf/wall
 	icon_state = "wall"
 	density = TRUE
-
-turf/waypoint
-	icon_state = "waypoint"

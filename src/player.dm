@@ -20,6 +20,14 @@ mob/player
 
 mob/player/Stat()
 	stat("health / max_health", "[src.health] / [src.max_health]")
+	stat("is_invulnerable", src.is_invulnerable)
+	stat("last_waypoint", src.last_waypoint)
+	stat("visited_waypoints", null)
+
+	for (var/wp in src.visited_waypoints)
+		stat(wp)
+
+	stat("can_move", src.can_move)
 
 mob/player/Login()
 	..()
@@ -27,8 +35,9 @@ mob/player/Login()
 	winshow(src, "debug", TRUE)
 	src.max_health = 3
 	src.health = src.max_health
-	src.last_waypoint = "start"
 	src.visited_waypoints = list()
+	src.last_waypoint = game?.GetWaypointByName("start")
+	src.Move(src.last_waypoint, src.dir)
 
 mob/player/Move(newloc, d)
 	if (!src.can_move)
